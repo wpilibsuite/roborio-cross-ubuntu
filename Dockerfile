@@ -17,5 +17,5 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 
 # Install toolchain
-COPY --from=wpilib/roborio-toolchain:2018-17.10 /packages/*.deb /packages/
+COPY --from=wpilib/roborio-toolchain:2018-future-17.10 /packages/*.deb /packages/
 RUN dpkg -i /packages/*.deb && rm -rf /packages
