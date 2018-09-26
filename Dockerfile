@@ -31,4 +31,6 @@ COPY jdk-11.jinfo .jdk-11.jinfo
 RUN bash -c "grep /usr/lib/jvm .jdk-11.jinfo | awk '{ print \"update-alternatives --install /usr/bin/\" \$2 \" \" \$2 \" \" \$3 \" 2\"; }' | bash " \
   && update-java-alternatives -s jdk-11
 
+ENV JAVA_HOME /usr/lib/jvm/jdk-11
+
 WORKDIR /
