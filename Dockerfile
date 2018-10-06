@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y tzdata && apt-get install -y \
     make \
     libopencv-dev \
     python-all-dev \
+    sudo \
     unzip \
     wget \
     zip \
