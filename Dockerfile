@@ -27,11 +27,11 @@ RUN dpkg -i /packages/*.deb && rm -rf /packages
 
 # Install OpenJDK 11
 WORKDIR /usr/lib/jvm
-RUN curl -SL https://download.java.net/java/GA/jdk11/28/GPL/openjdk-11+28_linux-x64_bin.tar.gz | tar xzf -
-COPY jdk-11.jinfo .jdk-11.jinfo
-RUN bash -c "grep /usr/lib/jvm .jdk-11.jinfo | awk '{ print \"update-alternatives --install /usr/bin/\" \$2 \" \" \$2 \" \" \$3 \" 2\"; }' | bash " \
-  && update-java-alternatives -s jdk-11
+RUN curl -SL https://download.java.net/java/GA/jdk11/13/GPL/openjdk-11.0.1_linux-x64_bin.tar.gz | tar xzf -
+COPY jdk-11.0.1.jinfo .jdk-11.0.1.jinfo
+RUN bash -c "grep /usr/lib/jvm .jdk-11.0.1.jinfo | awk '{ print \"update-alternatives --install /usr/bin/\" \$2 \" \" \$2 \" \" \$3 \" 2\"; }' | bash " \
+  && update-java-alternatives -s jdk-11.0.1
 
-ENV JAVA_HOME /usr/lib/jvm/jdk-11
+ENV JAVA_HOME /usr/lib/jvm/jdk-11.0.1
 
 WORKDIR /
