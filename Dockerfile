@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y tzdata && apt-get install -y \
     ca-certificates \
     cmake \
     curl \
+    fakeroot \
     g++ --no-install-recommends \
     gcc \
     gdb \
