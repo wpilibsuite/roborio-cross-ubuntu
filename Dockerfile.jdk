@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y tzdata && apt-get install -y \
     git \
     java-common \
     libisl15 \
-    openjdk-11-jdk-headless \
+    openjdk-11-jdk \
     sudo \
     unzip \
     wget \

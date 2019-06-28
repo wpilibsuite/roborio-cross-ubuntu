@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y tzdata && apt-get install -y \
     java-common \
     libc6-dev \
     libisl15 \
-    openjdk-11-jdk-headless \
+    openjdk-11-jdk \
     make \
     libopencv-dev \
     python-all-dev \
