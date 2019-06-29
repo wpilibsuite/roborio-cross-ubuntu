@@ -21,6 +21,10 @@ RUN apt-get update && apt-get install -y tzdata && apt-get install -y \
     unzip \
     wget \
     zip \
+    python3-dev \
+    python3-pip \
+    python3-setuptools \
+    clang-format-6.0 \
   && rm -rf /var/lib/apt/lists/*
 
 ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
