@@ -23,9 +23,9 @@ RUN apt-get update && apt-get install -y tzdata && apt-get install -y \
     zip \
   && rm -rf /var/lib/apt/lists/*
 
+ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
+
 # Install toolchain
 RUN curl -SL https://github.com/wpilibsuite/roborio-toolchain/releases/download/v2020-1/FRC-2020-Linux-Toolchain-7.3.0.tar.gz | sh -c 'mkdir -p /usr/local && cd /usr/local && tar xzf - --strip-components=2'
-
-ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
 
 WORKDIR /
